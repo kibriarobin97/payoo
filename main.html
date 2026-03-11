@@ -1,11 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>next page</h3>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/5ee21b8d95.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto pb-4 bg-gray-200">
+      <div class="bg-base-100 py-6 rounded-b-xl">
+        <header class="px-5">
+          <nav class="flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <div>
+                <img class="w-11 h-11" src="assets/logo.png" alt="" />
+              </div>
+              <div>
+                <h3 class="font-extrabold text-xl">$ <span id="main-balance">30</span></h3>
+                <p class="text-gray-500">Available Balance</p>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-outline">
+                <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
+                Log Out
+              </button>
+            </div>
+          </nav>
+        </header>
+
+        <hr class="border border-gray-300 mt-4 mb-6" />
+
+        <!-- add money section -->
+        <section class="px-5">
+          <div class="space-y-2">
+            <h2 class="text-2xl font-bold">
+              Welcome to Pay<span class="text-[#7460FF]">oo</span>
+            </h2>
+            <p class="text-gray-500">
+              Enjoy fast, secure & hassle-free financial services with the
+              lowest cash out charge.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-7">
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p class="text-center">Add Money</p>
+            </div>
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-2.png" alt="" />
+              <p class="text-center">Cash Out</p>
+            </div>
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-3.png" alt="" />
+              <p class="text-center">Send Money</p>
+            </div>
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-4.png" alt="" />
+              <p class="text-center">Get Bonus</p>
+            </div>
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-5.png" alt="" />
+              <p class="text-center">Pay Bill</p>
+            </div>
+            <div
+              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="assets/opt-6.png" alt="" />
+              <p class="text-center">Transactions</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="mt-7">
+        <h2 class="px-5 text-xl font-semibold mb-3">Add Money</h2>
+        <div class="w-full">
+          <div class="px-5">
+            <div class="card bg-base-100 rounded-xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                  <label class="font-medium text-black">Select a Bank</label>
+                  <select
+                    class="select cursor-pointer border-none bg-[#F4F5F7] rounded-full w-full"
+                  >
+                    <option disabled selected>Select Bank</option>
+                    <option value="DBBL">Dutch Bangla Bank Limited</option>
+                    <option class="IBBL">Islami Bank Bangladesh Limited</option>
+                    <option value="BRAC">BRAC Bank</option>
+                    <option value="Eastern">Eastern Bank</option>
+                    <option value="Mercantile">Mercantile Bank</option>
+                    <option value="City">City Bank</option>
+                  </select>
+                  <label class="font-medium text-black">Bank Account No.</label>
+                  <input
+                    id="account-number"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter your bank account"
+                    required
+                  />
+                  <label class="font-medium text-black">Amount to Add</label>
+                  <input
+                    id="amount"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter your amount"
+                    required
+                  />
+                  <label class="font-medium text-black">Pin Number</label>
+                  <input
+                    id="pin"
+                    type="text"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter 4 digit pin"
+                    required
+                  />
+                  <button
+                    id="add-money"
+                    class="btn btn-primary rounded-full font-bold mt-4"
+                  >
+                    Add Money
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="./script/addMoney.js"></script>
+  </body>
 </html>
