@@ -66,6 +66,7 @@
               <p class="text-center">Cash Out</p>
             </div>
             <div
+            id="send-money-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-3.png" alt="" />
@@ -183,10 +184,55 @@
                     required
                   />
                   <button
-                    id="add-money"
+                    id="cash-out"
                     class="btn btn-primary rounded-full font-bold mt-4"
                   >
                     Withdraw Money
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- send money section -->
+       <section id="send-money-section" class="mt-7">
+        <h2 class="px-5 text-xl font-semibold mb-3">Send Money</h2>
+        <div class="w-full">
+          <div class="px-5">
+            <div class="card bg-base-100 rounded-xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                  <label class="font-medium text-black">User Account Number</label>
+                  <input
+                    id="account-number"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter account number"
+                    required
+                  />
+                  <label class="font-medium text-black">Amount</label>
+                  <input
+                    id="amount"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter amount to send"
+                    required
+                  />
+                  <label class="font-medium text-black">Pin</label>
+                  <input
+                    id="pin"
+                    type="text"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter 4 digit pin"
+                    required
+                  />
+                  <button
+                    id="send-money"
+                    class="btn btn-primary rounded-full font-bold mt-4"
+                  >
+                    Send Money
                   </button>
                 </fieldset>
               </form>

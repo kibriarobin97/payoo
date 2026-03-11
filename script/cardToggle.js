@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll(".option-card");
+cards[0].classList.add('border-purple-400', 'text-purple-500', 'bg-purple-100', 'font-medium');
 
 for(const card of cards){
     card.addEventListener("click", function(){
