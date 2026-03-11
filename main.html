@@ -17,6 +17,7 @@
   </head>
   <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto pb-4 bg-gray-200">
+      <!-- navbar section -->
       <div class="bg-base-100 py-6 rounded-b-xl">
         <header class="px-5">
           <nav class="flex justify-between items-center">
@@ -25,7 +26,9 @@
                 <img class="w-11 h-11" src="assets/logo.png" alt="" />
               </div>
               <div>
-                <h3 class="font-extrabold text-xl">$ <span id="main-balance">30</span></h3>
+                <h3 class="font-extrabold text-xl">
+                  $ <span id="main-balance">30</span>
+                </h3>
                 <p class="text-gray-500">Available Balance</p>
               </div>
             </div>
@@ -41,6 +44,7 @@
         <hr class="border border-gray-300 mt-4 mb-6" />
 
         <section class="px-5">
+          <!-- about section -->
           <div class="space-y-2">
             <h2 class="text-2xl font-bold">
               Welcome to Pay<span class="text-[#7460FF]">oo</span>
@@ -50,42 +54,46 @@
               lowest cash out charge.
             </p>
           </div>
+
+          <!-- card button section -->
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-7">
             <div
-            id="add-money-btn"
+              id="add-money-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-1.png" alt="" />
               <p class="text-center">Add Money</p>
             </div>
             <div
-            id="cash-out-btn"
+              id="cash-out-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-2.png" alt="" />
               <p class="text-center">Cash Out</p>
             </div>
             <div
-            id="send-money-btn"
+              id="send-money-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-3.png" alt="" />
               <p class="text-center">Send Money</p>
             </div>
             <div
-            id="get-bonus-btn"
+              id="get-bonus-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-4.png" alt="" />
               <p class="text-center">Get Bonus</p>
             </div>
             <div
+              id="bill-pay-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-5.png" alt="" />
               <p class="text-center">Pay Bill</p>
             </div>
             <div
+              id="transactions-btn"
               class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-6.png" alt="" />
@@ -109,7 +117,7 @@
                   >
                     <option disabled selected>Select Bank</option>
                     <option value="DBBL">Dutch Bangla Bank Limited</option>
-                    <option class="IBBL">Islami Bank Bangladesh Limited</option>
+                    <option value="IBBL">Islami Bank Bangladesh Limited</option>
                     <option value="BRAC">BRAC Bank</option>
                     <option value="Eastern">Eastern Bank</option>
                     <option value="Mercantile">Mercantile Bank</option>
@@ -153,7 +161,7 @@
       </section>
 
       <!-- cash out section -->
-       <section id="cash-out-section" class="mt-7">
+      <section id="cash-out-section" class="mt-7">
         <h2 class="px-5 text-xl font-semibold mb-3">Cash Out</h2>
         <div class="w-full">
           <div class="px-5">
@@ -198,14 +206,16 @@
       </section>
 
       <!-- send money section -->
-       <section id="send-money-section" class="mt-7">
+      <section id="send-money-section" class="mt-7">
         <h2 class="px-5 text-xl font-semibold mb-3">Send Money</h2>
         <div class="w-full">
           <div class="px-5">
             <div class="card bg-base-100 rounded-xl">
               <form class="card-body">
                 <fieldset class="fieldset">
-                  <label class="font-medium text-black">User Account Number</label>
+                  <label class="font-medium text-black"
+                    >User Account Number</label
+                  >
                   <input
                     id="account-number"
                     type="number"
@@ -270,6 +280,68 @@
           </div>
         </div>
       </section>
+
+      <!-- pay bill section -->
+      <section id="bill-pay-section" class="mt-7">
+        <h2 class="px-5 text-xl font-semibold mb-3">Pay Bill</h2>
+        <div class="w-full">
+          <div class="px-5">
+            <div class="card bg-base-100 rounded-xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                  <label class="font-medium text-black">Select to Pay</label>
+                  <select
+                    class="select cursor-pointer border-none bg-[#F4F5F7] rounded-full w-full"
+                  >
+                    <option disabled selected>Select Bill Type</option>
+                    <option value="electricity">Electricity Bill</option>
+                    <option value="gas">Gas Bill</option>
+                    <option value="water">Water Bill</option>
+                    <option value="internet">Internet Bill</option>
+                    <option value="mobile">Mobile Recharge</option>
+                    <option value="TVCable">TV Cable Bill</option>
+                  </select>
+                  <label class="font-medium text-black"
+                    >Biller Account No.</label
+                  >
+                  <input
+                    id=""
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter account number"
+                    required
+                  />
+                  <label class="font-medium text-black">Amount to pay</label>
+                  <input
+                    id=""
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter bill amount"
+                    required
+                  />
+                  <label class="font-medium text-black">Pin Number</label>
+                  <input
+                    id=""
+                    type="text"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter 4 digit pin"
+                    required
+                  />
+                  <button
+                    id="bill-pay"
+                    class="btn btn-primary rounded-full font-bold mt-4"
+                  >
+                    Pay Now
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- transactions section -->
+      <section></section>
     </section>
 
     <script src="./script/addMoney.js"></script>
