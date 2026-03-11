@@ -40,7 +40,6 @@
 
         <hr class="border border-gray-300 mt-4 mb-6" />
 
-        <!-- add money section -->
         <section class="px-5">
           <div class="space-y-2">
             <h2 class="text-2xl font-bold">
@@ -53,37 +52,39 @@
           </div>
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-7">
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            id="add-money-btn"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-1.png" alt="" />
               <p class="text-center">Add Money</p>
             </div>
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+            id="cash-out-btn"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-2.png" alt="" />
               <p class="text-center">Cash Out</p>
             </div>
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-3.png" alt="" />
               <p class="text-center">Send Money</p>
             </div>
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-4.png" alt="" />
               <p class="text-center">Get Bonus</p>
             </div>
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-5.png" alt="" />
               <p class="text-center">Pay Bill</p>
             </div>
             <div
-              class="border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
+              class="option-card border border-gray-500 p-2 cursor-pointer rounded-lg flex flex-col justify-center items-center"
             >
               <img src="assets/opt-6.png" alt="" />
               <p class="text-center">Transactions</p>
@@ -91,7 +92,9 @@
           </div>
         </section>
       </div>
-      <section class="mt-7">
+
+      <!-- add money section -->
+      <section id="add-money-section" class="mt-7">
         <h2 class="px-5 text-xl font-semibold mb-3">Add Money</h2>
         <div class="w-full">
           <div class="px-5">
@@ -146,8 +149,55 @@
           </div>
         </div>
       </section>
+
+      <!-- cash out section -->
+       <section id="cash-out-section" class="mt-7">
+        <h2 class="px-5 text-xl font-semibold mb-3">Cash Out</h2>
+        <div class="w-full">
+          <div class="px-5">
+            <div class="card bg-base-100 rounded-xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                  <label class="font-medium text-black">Agent Number</label>
+                  <input
+                    id="account-number"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter agent number"
+                    required
+                  />
+                  <label class="font-medium text-black">Amount</label>
+                  <input
+                    id="amount"
+                    type="number"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter amount to withdraw"
+                    required
+                  />
+                  <label class="font-medium text-black">Pin</label>
+                  <input
+                    id="pin"
+                    type="text"
+                    class="input border-none bg-[#F4F5F7] rounded-full w-full"
+                    placeholder="Enter 4 digit pin"
+                    required
+                  />
+                  <button
+                    id="add-money"
+                    class="btn btn-primary rounded-full font-bold mt-4"
+                  >
+                    Withdraw Money
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <script src="./script/addMoney.js"></script>
+    <script src="./script/cashOut.js"></script>
+    <script src="./script/cardToggle.js"></script>
   </body>
 </html>
